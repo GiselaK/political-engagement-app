@@ -3,18 +3,18 @@ import { Button } from '@/components/ui/button'
 import { Link } from '@tanstack/react-router'
 
 export default function Home() {
-  const iconUrl = '../public/app-icon.png' // Place your icon in public/assets/
+//   const iconUrl = '../public/app-icon.png' // Place your icon in public/assets/
 
   return (
     <main className="max-w-3xl mx-auto p-6 space-y-8">
       {/* Branding */}
       <div className="flex flex-col items-center space-y-2">
-        <img
+        {/* <img
           src={iconUrl}
           alt="By The People Logo"
           className="w-20 h-20 border shadow-sm object-cover"
           loading="lazy"
-        />
+        /> */}
         <h1 className="text-2xl font-bold tracking-tight">By The People</h1>
       </div>
 
