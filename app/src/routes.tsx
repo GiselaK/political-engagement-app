@@ -6,14 +6,21 @@ import {
 } from '@tanstack/react-router'
 import SearchBills from './pages/SearchBills'
 import BillDetail from './pages/BillDetail'
+import Home from './pages/Home'
 
 const rootRoute = createRootRoute({
   notFoundComponent: () => <div className="p-4 text-center text-red-500">Page not found 😢</div>,
 })
 
-const searchBillsRoute = createRoute({
+const homeRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: '/', // Optional but good to include for clarity
+  component: Home,
+})
+
+const searchBillsRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/search', // Optional but good to include for clarity
   component: SearchBills,
 })
 
@@ -24,6 +31,7 @@ const billDetailRoute = createRoute({
 })
 
 const routeTree = rootRoute.addChildren([
+  homeRoute,
   searchBillsRoute,
   billDetailRoute,
 ])
