@@ -10,7 +10,7 @@ import { useNavigate } from '@tanstack/react-router';
 // Simulate fetching topics from backend
 async function fetchBills(query: string) {
   if (!query) return []
-  const res = await fetch(`https://polengagementappbackend-u8euk.kinsta.app/search?state=ALL&query=${encodeURIComponent(query)}`)
+  const res = await fetch(`https://polengagementappbackend-u8euk.kinsta.app/search?state=CA&query=${encodeURIComponent(query)}`)
   if (!res.ok) throw new Error('Network error')
   return res.json() // Assume it returns array of { id, title }
 
