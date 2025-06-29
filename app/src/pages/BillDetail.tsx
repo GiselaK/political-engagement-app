@@ -11,7 +11,7 @@ interface BillData {
 }
 
 export default function BillDetail() {
-  const { billId } = useParams({ from: '/bills/:billId' })
+  const { billId } = useParams({ from: '/bills/$billId' })
 
   const { data, isLoading, isError } = useQuery<BillData>({
     queryKey: ['bill', billId],
